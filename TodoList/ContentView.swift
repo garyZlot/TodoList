@@ -15,6 +15,10 @@ struct ContentView: View {
     
     @EnvironmentObject private var todoManager: TodoManager
     
+    func deleteRow(at offsets:IndexSet) {
+        todoManager.todos.remove(atOffsets: offsets)
+    }
+    
     var body: some View {
         TabView(selection: $selection){
             List {
@@ -25,7 +29,7 @@ struct ContentView: View {
                         Text(todo.desc)
                             .font(.subheadline)
                     }
-                }
+                }.onDelete(perform:deleteRow)
             }
                 .tabItem {
                     VStack {
