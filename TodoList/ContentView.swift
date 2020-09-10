@@ -24,7 +24,7 @@ struct ContentView: View {
             NavigationView {
                 List {
                     ForEach(todoManager.todos) { todo in
-                        NavigationLink(destination: Text("aaa")){
+                        NavigationLink(destination: TodoDetail(todo: todo)){
                             VStack {
                                 Text(todo.name)
                                     .font(.title)

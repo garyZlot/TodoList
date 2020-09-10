@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F118B752509ED0E001C7EC0 /* TodoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F118B742509ED0E001C7EC0 /* TodoDetail.swift */; };
 		0F5D7D79250766D1004EDA9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D7D78250766D1004EDA9A /* AppDelegate.swift */; };
 		0F5D7D7B250766D1004EDA9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D7D7A250766D1004EDA9A /* SceneDelegate.swift */; };
 		0F5D7D7D250766D1004EDA9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D7D7C250766D1004EDA9A /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F118B742509ED0E001C7EC0 /* TodoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetail.swift; sourceTree = "<group>"; };
 		0F5D7D75250766D1004EDA9A /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5D7D78250766D1004EDA9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F5D7D7A250766D1004EDA9A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				0F5D7D83250766D3004EDA9A /* LaunchScreen.storyboard */,
 				0F5D7D86250766D3004EDA9A /* Info.plist */,
 				0F5D7D80250766D3004EDA9A /* Preview Content */,
+				0F118B742509ED0E001C7EC0 /* TodoDetail.swift */,
 			);
 			path = TodoList;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F118B752509ED0E001C7EC0 /* TodoDetail.swift in Sources */,
 				0F5D7D79250766D1004EDA9A /* AppDelegate.swift in Sources */,
 				0F5D7D8D25077AB4004EDA9A /* TodoManager.swift in Sources */,
 				0F5D7D7B250766D1004EDA9A /* SceneDelegate.swift in Sources */,
