@@ -21,15 +21,20 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection){
-            List {
-                ForEach(todoManager.todos) { todo in
-                    VStack {
-                        Text(todo.name)
-                            .font(.title)
-                        Text(todo.desc)
-                            .font(.subheadline)
-                    }
-                }.onDelete(perform:deleteRow)
+            NavigationView {
+                List {
+                    ForEach(todoManager.todos) { todo in
+                        NavigationLink(destination: Text("aaa")){
+                            VStack {
+                                Text(todo.name)
+                                    .font(.title)
+                                Text(todo.desc)
+                                    .font(.subheadline)
+                            }
+                        }
+                    }.onDelete(perform:deleteRow)
+                }
+                .navigationBarTitle(Text("TODO List"))
             }
                 .tabItem {
                     VStack {
