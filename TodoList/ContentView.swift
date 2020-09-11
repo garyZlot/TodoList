@@ -21,28 +21,28 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection){
-NavigationView {
-    List {
-        ForEach(todoManager.todos) { todo in
-            NavigationLink(destination: TodoDetail(todo: todo)){
+            NavigationView {
+                List {
+                    ForEach(todoManager.todos) { todo in
+                        NavigationLink(destination: TodoDetail(todo: todo)){
+                            VStack {
+                                Text(todo.name)
+                                    .font(.title)
+                                Text(todo.desc)
+                                    .font(.subheadline)
+                            }
+                        }
+                    }.onDelete(perform:deleteRow)
+                }
+                .navigationBarTitle(Text("TODO List"))
+            }
+            .tabItem {
                 VStack {
-                    Text(todo.name)
-                        .font(.title)
-                    Text(todo.desc)
-                        .font(.subheadline)
+                    Image("first")
+                    Text("TODO")
                 }
             }
-        }.onDelete(perform:deleteRow)
-    }
-    .navigationBarTitle(Text("TODO List"))
-}
-                .tabItem {
-                    VStack {
-                        Image("first")
-                        Text("TODO")
-                    }
-                }
-                .tag(0)
+            .tag(0)
             VStack {
                 Text("Add TODO")
                 TextField("输入任务", text: $todoStr)
@@ -59,13 +59,13 @@ NavigationView {
                     Text("Add")
                 }
             }
-                .tabItem {
-                    VStack {
-                        Image("second")
-                        Text("Add")
-                    }
+            .tabItem {
+                VStack {
+                    Image("second")
+                    Text("Add")
                 }
-                .tag(1)
+            }
+            .tag(1)
         }
     }
 }
