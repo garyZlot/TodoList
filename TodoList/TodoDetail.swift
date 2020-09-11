@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TodoDetail: View {
     @EnvironmentObject var todoManager: TodoManager
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State var todo: todo
     
@@ -28,6 +29,7 @@ struct TodoDetail: View {
                 .padding()
             Button(action: {
                 self.todoManager.todos[self.todoIndex] = self.todo
+                self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Update")
             }
